@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --fundo-1: #040d12;
+  --fundo-2: #3c3d37;
+  --fundo-3: #697565;
+  --fundo-4: #ecdfcc;
+  --text-collor: #faf0e6;
+}
+.navbar {
+  width: 100svw;
+  height: 60px;
+  background-color: transparent !important;
+  backdrop-filter: blur(20px) !important;
+  position: fixed;
+}
+
+body {
+  width: 100svw;
+  height: 100svh;
+  background: url(/img/fundo-2.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+main {
+  width: 100svw;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
