@@ -11,40 +11,31 @@
     <title>Quarteto Magnus</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-      <div class="container">
-        <a class="navbar-brand" href="/home/home.html">Quarteto Magnus</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="/home/home.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/sobre/sobre.html">Sobre</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/agenda/agenda.html">Agenda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Vendas</a>
-            </li>
-          </ul>
+    <div class="container-fluid">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="logo">Quarteto Magnus</div>
+          <div class="nav-link">
+            <ul class="nav navbar-nav">
+              <li><a id="len1" class="hoverable" href="#">Home</a></li>
+              <li><a id="len2" class="hoverable" href="#">Sobre</a></li>
+              <li class="drop">
+                <a id="len3" class="hoverable" href="#">Loja <span class="dropdown-arrow">&#9660;</span></a>
+                <ul class="dropdown">
+                  <li><a href="#">Vestuário</a></li>
+                  <li><a href="#">Acessórios</a></li>
+                  <li><a href="#">Kit Músicas</a></li>
+                  <li><a href="#">Partituras</a></li>
+                </ul>
+              </li>
+              <li><a id="len4" class="hoverable" href="#">Contato</a></li>
+              <li><a id="len5" class="hoverable" href="#">Videos</a></li>
+            </ul>
+          </div>
+          <a href="#" class="btn btn-5">Inscreva-se</a> 
         </div>
-      </div>
-    </nav>
-    <main>
-
-    </main>
-
-
+      </nav>
+    </div>
     <script src="home.js"></script>
   </body>
 </html>
