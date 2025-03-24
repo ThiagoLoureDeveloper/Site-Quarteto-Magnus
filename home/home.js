@@ -31,5 +31,26 @@ drop.forEach(function(element) {
     dropdown.style.transition = 'all 0.3s'; // Suaviza a transição
   });
 });
+document.addEventListener("DOMContentLoaded", function() {
+  const footer = document.getElementById("footer");
+  footer.style.backgroundColor = "#222";
+  footer.style.color = "#fff";
+  footer.style.padding = "20px";
+  footer.style.textAlign = "center";
+  footer.style.fontFamily = "Arial, sans-serif";
 
+  const socialIcons = document.querySelectorAll(".social-icon");
+  socialIcons.forEach(icon => {
+      icon.style.margin = "0 10px";
+      icon.style.fontSize = "24px";
+      icon.style.transition = "color 0.3s";
+      icon.style.color = "#fff";
+      icon.addEventListener("mouseover", function() {
+          icon.style.color = icon.getAttribute("data-color");
+      });
+      icon.addEventListener("mouseout", function() {
+          icon.style.color = "#fff";
+      });
+  });
+});
   
