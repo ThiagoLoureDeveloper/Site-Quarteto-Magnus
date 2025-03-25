@@ -103,7 +103,6 @@ body {
   opacity: 1;
   transform: translateY(-5px);
 }
-
 .btn-5 {
   display: inline-block;
   padding: 8px 18px;
@@ -135,35 +134,6 @@ body {
   z-index: 1000;
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
 }
-h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-  background: linear-gradient(
-    45deg,
-    var(--fundo-2),
-    var(--fundo-3),
-    var(--fundo-4),
-    var(--text-collor),
-    var(--fundo-5)
-  );
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientMove 5s infinite linear;
-}
-
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 .dropdown li a {
   color: white;
@@ -191,27 +161,134 @@ h2 {
   display: inline-flex;
   align-items: center;
 }
-.content-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  height: calc(100svh - 60px);
-  padding: 20px;
-  margin-top: 60px;
-  gap: 40px;
+.container {
+  width: 100svw;
+  height: calc(100% - 60px);
+  margin-top: 80px;
+  margin-bottom: 60px;
 }
-.content-section p {
-  font-size: 1.5rem;
-  width: 80%;
-  height: 100px;
+.card-container {
+    display: flex;
+    justify-content: space-between; /* Distribui os cards uniformemente */
+    align-items: center;
+    gap: 1rem; /* Reduz o espaçamento entre os cards */
+    max-width: 100%;
+    padding: 1rem;
+    overflow: hidden;
+    flex-wrap: nowrap; /* Impede a quebra de linha */
+  }
+  
+  .card-article {
+    flex: 1; /* Faz os cards ocuparem espaços iguais */
+    max-width: 18%; /* Ajusta a largura máxima de cada card */
+  }
+  
+  .card-img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do card */
+    max-width: 180px; /* Reduz o tamanho da imagem */
+    height: auto;
+    border-radius: 1.5rem;
+  }
+  
+
+.card-data {
+  width: 280px;
+  background-color: var(--fundo-2);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.15);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
 }
-.content-section h2 {
-  font-size: 4rem;
-  width: 80%;
-  height: 100px;
+
+.card-description {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 0.25rem;
 }
+
+.card-title {
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  color: var(--text-collor);
+  margin-bottom: 0.75rem;
+}
+
+.card-button {
+  text-decoration: none;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--text-collor);
+}
+
+.card-button:hover {
+  text-decoration: underline;
+}
+
+/* Naming animations in hover */
+.card-article:hover .card-data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.card-article:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.card-article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.card-article:not(:hover) .card-data {
+  animation: remove-data 1s forwards;
+}
+
+/* Card animation */
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(0.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
 
 footer {
   background: linear-gradient(#222, #3c3d37, #697565);
@@ -307,12 +384,6 @@ footer {
   font-size: 14px;
 }
 
-@media (min-width: 768px) {
-  .navbar {
-    display: inline-block;
-  }
-}
-
 body {
   background-color: rgb(73, 73, 73);
   font-weight: 600;
@@ -333,4 +404,41 @@ nav li {
 
 nav li a {
   transition: 0.5s color ease-in-out;
+}
+
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+
+  .card-data {
+    width: 250px;
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .container {
+    height: 100vh;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card-img {
+    width: 348px;
+  }
+  .card-data {
+    width: 316px;
+    padding-inline: 2.5rem;
+  }
 }
