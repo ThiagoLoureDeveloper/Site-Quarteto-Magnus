@@ -53,4 +53,29 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById("loader");
+  const links = document.querySelectorAll("a.link-navegacao");
+
+  // Oculta o loader depois que a página carregar
+  setTimeout(() => {
+    loader.classList.remove("active");
+  }, 1000);
+
+  // Exibe o loader antes de sair da página
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const destino = link.getAttribute("href");
+
+      loader.classList.add("active");
+
+      // Aguarda o loader aparecer antes de redirecionar
+      setTimeout(() => {
+        window.location.href = destino;
+      }, 500);
+    });
+  });
+});
+
   

@@ -15,13 +15,47 @@
 body {
   width: 100svw;
   height: 100svh;
-  background: url(/img/fundo-2.jpg) no-repeat center center fixed;
-  background-size: cover;
   overflow-x: hidden;
   overflow-y: auto;
 }
+#loader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(/img/imagem\ 1\ cortada.jpg) no-repeat center center fixed;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+#loader.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ccc;
+  border-top: 6px solid #ff5722;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .navbar {
-  width: 100%;
+  width: 100svw;
   height: 60px;
   color: var(--text-collor);
   display: flex;
@@ -30,9 +64,9 @@ body {
   top: 0;
   left: 0;
   z-index: 1000;
-  background: rgba(19, 16, 16, 0.25);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   padding: 10px;
 }
 .logo a {
@@ -164,9 +198,10 @@ body {
 }
 main {
   width: 100svw;
-  height: calc(100% - 60px);
-  margin-top: 60px;
+  height: auto;
+  margin-top: 50px;
 }
+
 .wrapper {
   width: 100%;
   height: 100vh;
@@ -175,9 +210,9 @@ main {
   justify-content: center;
 }
 .carousel {
-  height: 100vh;
+  width: 100svw;
+  height: 100svh;
   margin-top: -50px;
-  width: 100vw;
   overflow: hidden;
   position: relative;
 }
@@ -188,15 +223,15 @@ main {
   inset: 0 0 0 0;
 }
 .carousel .list .item img {
-  width: 100%;
-  height: 100%;
+  width: 100svw;
+  height: 100svh;
   object-fit: cover;
 }
 .carousel .list .item .content {
   position: absolute;
-  top: 20%;
+  top: 12%;
   width: 1280px;
-  max-width: 80%;
+  max-width: 65rem;
   left: 40%;
   transform: translateX(-50%);
   padding-right: 30%;
@@ -204,20 +239,21 @@ main {
   color: #fff;
   text-shadow: 0 5px 10px #0004;
 }
-.carousel .list .item .content .des{
-  text-shadow: 5px 10px 20px #0004;
-  
+.carousel .list .item .content .des {
+  text-shadow: 1px 1px 3px #222222;
+  font-weight: bold;
 }
 .carousel .list .item .author {
   font-weight: bold;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   color: #f1683a;
+  font-size: 2em;
 }
 .carousel .list .item .title,
 .carousel .list .item .topic {
   font-size: 5em;
   font-weight: bold;
-  line-height: 1.3em;
+  line-height: 1em;
 }
 .carousel .list .item .topic {
   color: #f1683a;
@@ -227,7 +263,7 @@ main {
   grid-template-columns: repeat(2, 130px);
   grid-template-rows: 40px;
   gap: 5px;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 .carousel .list .item .buttons button {
   border: none;
@@ -271,13 +307,16 @@ main {
   right: 10px;
 }
 .thumbnail .item .content .title {
-  font-weight: 500;
-  
+  font-weight: 400;
+  text-shadow: 2px 4px 4px #000000;
+  background: rgba(25, 22, 22, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.thumbnail .item .content .description {
-  font-weight: 700;
-  color: var(--fundo-5);
-}
+
 /* arrows */
 .arrows {
   position: absolute;
@@ -289,6 +328,7 @@ main {
   display: flex;
   gap: 10px;
   align-items: center;
+  bottom: 0px;
 }
 .arrows button {
   width: 40px;
@@ -389,7 +429,7 @@ main {
 
 .carousel.next .time,
 .carousel.prev .time {
-  animation: runningTime .5s linear 1 forwards;
+  animation: runningTime 0.5s linear 1 forwards;
 }
 @keyframes runningTime {
   from {
