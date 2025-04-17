@@ -23,8 +23,6 @@ body {
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
-  background: url(/img/imagem\ 1\ cortada.jpg) no-repeat center center fixed;
-  background-size: contain;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -196,6 +194,29 @@ body {
   display: inline-flex;
   align-items: center;
 }
+.cart-inscrever-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cart-icon {
+  position: relative;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--text-collor);
+}
+
+.cart-count {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
 main {
   width: 100svw;
   height: auto;
@@ -251,7 +272,7 @@ main {
 }
 .carousel .list .item .title,
 .carousel .list .item .topic {
-  font-size: 5em;
+  font-size: 4.5em;
   font-weight: bold;
   line-height: 1em;
 }

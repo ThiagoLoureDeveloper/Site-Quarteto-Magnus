@@ -120,7 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       loader.classList.add("active");
 
-      // Aguarda o loader aparecer antes de redirecionar
       setTimeout(() => {
         window.location.href = destino;
       }, 500);
