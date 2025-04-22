@@ -141,7 +141,7 @@ body {
 .cart-inscrever-container {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 25px;
 }
 
 .cart-icon {

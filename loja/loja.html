@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="loja.css" />
+    <title>Quarteto Magnus</title>
+  </head>
+  <body>
+    <div id="loader" class="active">
+      <div class="spinner"></div>
+    </div>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="logo"><a href="/home/home.html">Quarteto Magnus</a></div>
+        <div class="nav-link">
+          <ul class="nav navbar-nav">
+            <li>
+              <a id="len1" class="hoverable" href="/home/home.html">Home</a>
+            </li>
+            <li>
+              <a id="len2" class="hoverable" href="/sobre/sobre.html">Sobre</a>
+            </li>
+            <li class="drop">
+              <a id="len3" class="hoverable" href="/loja/loja.html"
+                >Loja <span class="dropdown-arrow">&#9660;</span></a
+              >
+              <ul class="dropdown">
+                <li><a href="#">Vestuário</a></li>
+                <li><a href="#">Acessórios</a></li>
+                <li><a href="#">Kit Músicas</a></li>
+                <li><a href="#">Partituras</a></li>
+              </ul>
+            </li>
+            <li><a id="len4" class="hoverable" href="#">Contato</a></li>
+            <li><a id="len5" class="hoverable" href="#">Videos</a></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="cart-inscrever-container">
+          <a id="cart" class="cart-icon" href="/pagamento/pagamento.html">
+            🛒 <span class="cart-count">0</span>
+          </a>
+          <a href="#" class="btn btn-5">Inscreva-se</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="carousel" data-type="vestuario">
+        <div class="list">
+          <article class="item other_1">
+            <div class="main-content" style="background-color: #9c4d2f">
+              <div class="content">
+                <h1>Vestuário</h1>
+                <h2>Camisa Casual</h2>
+                <p class="price">R$ 20,99</p>
+                <p class="description">
+                  Camisa em algodão estampada
+                </p>
+                <button class="addToCard">Adicionar ao Carrinho 🛒</button>
+              </div>
+            </div>
+            <figure class="image">
+              <img src="/img/camisa png.png" alt="Moletom de algodão multicolorido" />
+              <figcaption>Camisa em algodão </figcaption>
+            </figure>
+          </article>
+          <article class="item active">
+            <div class="main-content" style="background-color: #FFA55D">
+              <div class="content">
+                <h1>Vestuário</h1>
+                <h2>Moletom cores</h2>
+                <p class="price">R$ 79,99</p>
+                <p class="description">
+                  Moletom em algodão 
+                </p>
+                <button class="addToCard">Adicionar ao Carrinho 🛒</button>
+              </div>
+            </div>
+            <figure class="image">
+              <img src="/img/moletom png.png" alt="moletom creme" />
+              <figcaption>moletom top</figcaption>
+            </figure>
+          </article>
+          <article class="item other_2">
+            <div class="main-content" style="background-color: #FF6363">
+              <div class="content">
+                <h1>Vestuário</h1>
+                <h2>camiseta</h2>
+                <p class="price">R$ 19,90</p>
+                <p class="description">
+                  coisas que ainda tenho que implementar
+                </p>
+                <button class="addToCard">Adicionar ao Carrinho 🛒</button>
+              </div>
+            </div>
+            <figure class="image">
+              <img src="/img/moletom png.png" alt="" />
+              <figcaption>Camisa simples</figcaption>
+            </figure>
+          </article>
+          <article class="item">
+            <div class="main-content" style="background-color: #644A07">
+              <div class="content">
+                <h1>Vestuário</h1>
+                <h2>camisa com logo</h2>
+                <p class="price">R$ 22,90</p>
+                <p class="description">
+                  Coisas que tenho que implementar
+                </p>
+                <button class="addToCard">Adicionar ao Carrinho 🛒</button>
+              </div>
+            </div>
+            <figure class="image">
+              <img src="/img/moletom png.png" alt="" />
+              <figcaption>camisa</figcaption>
+            </figure>
+          </article>
+        </div>
+        <div class="arrows">
+          <button id="prev-vestuario"><</button>
+          <button id="next-vestuario">></button>
+        </div>
+      </section>
+
+      <hr>
+
+      <section class="carousel" data-type="acessorios">
+        <div class="list">
+          <article class="item other_1">
+            <div class="main-content" style="background-color: #9c4d2f">
+              <div class="content">
+                <h1>Acessórios</h1>
+                <h2>Camisa Casual</h2>
+                <p class="price">R$ 20,99</p>
+                <p class="description">
+                  Camisa em algodão estampada
+                </p>
+                <button class="addToCard">Adicionar ao Carrinho 🛒</button>
+              </div>
+            </div>
+            <figure class="image">
+              <img src="/img/camisa png.png" alt="Moletom de algodão multicolorido" />
+              <figcaption>Camisa em algodão </figcaption>
+            </figure>
+          </article>
+          <article class="item active">
+            <div class="main-content" style="background-color: #FFA55D">
+              <div class="content">
+                <h1>Acessórios</h1>
+                <h2>Moletom cores</h2>
+                <p class="price">R$ 79,99</p>
+                <p class="description">
+                  Moletom em algodão 
+                </p>
+                <button class="addToCard">Adicionar ao Carrinho 🛒</button>
+              </div>
+            </div>
+            <figure class="image">
+              <img src="/img/moletom png.png" alt="moletom creme" />
+              <figcaption>moletom top</figcaption>
+            </figure>
+          </article>
+          <article class="item other_2">
+            <div class="main-content" style="background-color: #FF6363">
+              <div class="content">
+                <h1>Acessórios</h1>
+                <h2>camiseta</h2>
+                <p class="price">R$ 19,90</p>
+                <p class="description">
+                  coisas que ainda tenho que implementar
+                </p>
+                <button class="addToCard">Adicionar ao Carrinho 🛒</button>
+              </div>
+            </div>
+            <figure class="image">
+              <img src="/img/moletom png.png" alt="" />
+              <figcaption>Camisa simples</figcaption>
+            </figure>
+          </article>
+          <article class="item">
+            <div class="main-content" style="background-color: #644A07">
+              <div class="content">
+                <h1>Acessórios</h1>
+                <h2>camisa com logo</h2>
+                <p class="price">R$ 22,90</p>
+                <p class="description">
+                  Coisas que tenho que implementar
+                </p>
+                <button class="addToCard">Adicionar ao Carrinho 🛒</button>
+              </div>
+            </div>
+            <figure class="image">
+              <img src="/img/moletom png.png" alt="" />
+              <figcaption>camisa</figcaption>
+            </figure>
+          </article>
+        </div>
+        <div class="arrows">
+          <button id="prev-acessorios"><</button>
+          <button id="next-acessorios">></button>
+        </div>
+      </section>
+
+      
+      
+      
+    </main>
+
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="text-title">
+          <p>Conheça nossas redes Sociais</p>
+        </div>
+        <div class="social-links">
+          <a href="#" target="_blank" class="social-icon" data-color="#E1306C"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" target="_blank" class="social-icon" data-color="#FF0000"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="#" target="_blank" class="social-icon" data-color="#25D366"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-section">
+          <img src="/img/MAGNUS.png" alt="Logo" />
+          <p>
+            Venha conhecer nossas redes e adquira nossos produtos para ajudar
+            nosso ministério.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Links Úteis</h3>
+          <ul>
+            <li><a href="#">Vestuário</a></li>
+            <li><a href="#">Acessórios</a></li>
+            <li><a href="#">Kit's Musicais</a></li>
+            <li><a href="#">Partituras</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <ul>
+            <li>
+              <i class="fab fa-whatsapp"></i>
+              <a href="#">WhatsApp</a>
+            </li>
+            <li>
+              <i class="far fa-envelope"></i>
+              <a href="mailto:email@example.com">E-mail</a>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+55123456789">Telefone</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyrite">
+        <p>
+          &copy; 2025 Quarteto Magnus Oficial - Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script src="loja.js"></script>
+  </body>
+</html>
