@@ -151,7 +151,7 @@ const changeSlider = (carouselObj) => {
   clearInterval(carouselObj.interval);
   carouselObj.interval = setInterval(() => {
     carouselObj.nextBtn.click();
-  }, 5000);
+  }, 10000);
 };
 
 // Iniciar carrosseis
@@ -186,7 +186,7 @@ carrosseis.forEach(carouselObj => {
   // Iniciar autoplay
   carouselObj.interval = setInterval(() => {
     carouselObj.nextBtn.click();
-  }, 5000);
+  }, 10000);
 
   // Configuração inicial
   changeSlider(carouselObj);
