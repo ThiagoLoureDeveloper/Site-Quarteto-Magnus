@@ -18,6 +18,12 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
+.container-fluid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
 #loader {
   position: fixed;
   top: 0; left: 0;
@@ -53,11 +59,11 @@ body {
 }
 
 .navbar {
-  width: 100svw;
-  height: 60px;
+  width: 100%;
+  height: auto;
   color: var(--text-collor);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -67,9 +73,9 @@ body {
   -webkit-backdrop-filter: blur(15px);
   padding: 10px;
 }
-.logo a {
-  width: 8svw;
-  height: 6svh;
+.logo img {
+  width: 6svw;
+  height: 10svh;
   cursor: pointer;
   text-decoration: none;
   color: var(--text-collor);
